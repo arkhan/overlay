@@ -1,13 +1,20 @@
-arkhan Custom Gentoo/Funtoo overlay
+Custom Gentoo/Funtoo overlay
 =======================
 
-Requirements
+Requisitos
 ------------
 - Gentoo Linux
 - app-portage/layman
 
-Usage
+Modo de Uso
 -----
-Add this overlay with [Layman](http://layman.sourceforge.net/) like this:
+Agregar este *Overlay* con [Layman](http://layman.sourceforge.net/):
 
     layman -o http://arkhan.github.io/overlay/repositories.xml -f -a arkhan
+
+Contenido
+---------
+#### dev-python/[Box2D](https://github.com/pybox2d/pybox2d.git)
+    pybox2d 2D Game Physics for Python https://github.com/pybox2d/pybox2d
+#### dev-python/[pilas](https://github.com/hugoruscitti/pilas)
+    Pilas es un motor para realizar videojuegos de manera rápida y sencilla.
