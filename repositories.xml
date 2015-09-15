@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+	<repo quality="experimental" status="unofficial">
+		<name>arkhan</name>
+    		<description>arkhan Personal Overlay</description>
+    		<homepage>https://github.com/arkhan/overlay</homepage>
+    		<owner>
+      			<email>edison@openmailbox.org</email>
+      			<name>Ibañez P. Edison</name>
+    		</owner>
+    		<source type="git">https://github.com/arkhan/overlay.git</source>
+    		<feed></feed>
+  	</repo>
+</repositories>
