@@ -10,7 +10,7 @@ Modo de Uso
 -----
 Agregar este *Overlay* con [Layman](http://layman.sourceforge.net/):
 
-    layman -o http://arkhan.github.io/overlay/repositories.xml -f -a arkhan
+    layman -o https://raw.githubusercontent.com/arkhan/overlay/master/repositories.xml -f -a arkhan
 
 Contenido
 ---------
