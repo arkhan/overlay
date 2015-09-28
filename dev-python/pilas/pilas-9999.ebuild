@@ -8,12 +8,13 @@ inherit distutils-r1
 
 DESCRIPTION="Pilas es un motor para realizar videojuegos de manera rápida y sencilla."
 HOMEPAGE="http://www.pilas-engine.com.ar https://github.com/hugoruscitti/pilas"
+RESTRICT="mirror"
 
 if [[ ${PV} == "9999" ]] ; then
    EGIT_REPO_URI="git://github.com/hugoruscitti/pilas.git"
    inherit git-r3
 else
-   SRC_URI="https://github.com/hugoruscitti/${MY_PN}/archive/${PV}.zip -> ${MY_PN}-${PV}.zip"
+   SRC_URI="https://github.com/hugoruscitti/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
    KEYWORDS="~amd64 ~x86"
 fi
 
