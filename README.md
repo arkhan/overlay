@@ -20,3 +20,5 @@ Contenido
     pybox2d 2D Game Physics for Python https://github.com/pybox2d/pybox2d
 #### dev-python/[pilas](https://github.com/hugoruscitti/pilas)
     Pilas es un motor para realizar videojuegos de manera rápida y sencilla.
+#### media-fonts/[tamsyn-font](http://www.fial.com/~scott/tamsyn-font/)
+    A monospaced bitmap font for the console and X11
