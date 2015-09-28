@@ -14,6 +14,8 @@ Agregar este *Overlay* con [Layman](http://layman.sourceforge.net/):
 
 Contenido
 ---------
+#### app-officeext/[languagetool](https://languagetool.org/)
+    LanguageTool is an Open Source proof­reading program for English, French, German, Polish, and more than
 #### dev-python/[Box2D](https://github.com/pybox2d/pybox2d.git)
     pybox2d 2D Game Physics for Python https://github.com/pybox2d/pybox2d
 #### dev-python/[pilas](https://github.com/hugoruscitti/pilas)
