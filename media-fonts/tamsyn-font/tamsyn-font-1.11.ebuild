@@ -9,6 +9,7 @@ inherit eutils font
 DESCRIPTION="A monospaced bitmap font for the console and X11"
 HOMEPAGE="http://www.fial.com/~scott/tamsyn-font"
 SRC_URI="http://www.fial.com/~scott/${PN}/download/${PN}-${PV}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"

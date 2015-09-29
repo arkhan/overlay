@@ -13,6 +13,7 @@ inherit office-ext-r1
 DESCRIPTION="Style and Grammar Checker for libreoffice"
 HOMEPAGE="http://www.languagetool.org/"
 SRC_URI="http://www.languagetool.org/download/${MY_P}.oxt"
+RESTRICT="mirror"
 
 LICENSE="LGPL-2"
 SLOT="0"

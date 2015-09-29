@@ -11,6 +11,7 @@ MY_PN=${PN/urxvt-/}
 DESCRIPTION="Tabbed plugin for rxvt-unicode with many enhancements"
 HOMEPAGE="https://github.com/manwe-pl/urxvt-tabbedex.git"
 SRC_URI="https://github.com/manwe-pl/urxvt-tabbedex/archive/${MY_PN}-${PV}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
