@@ -22,7 +22,6 @@ src_configure() { :; }
 src_compile() { :; }
 
 src_install() {
-	if [[ -f Makefile ]] || [[ -f GNUmakefile ]] || [[ -f makefile ]] ; then
-		emake DESTDIR="${D}" install
-	fi
+	into /usr/bin
+	cp -R "${S}/pinentry-rofi.scm" "${D}/usr/bin/pinentry-rofi"
 }
