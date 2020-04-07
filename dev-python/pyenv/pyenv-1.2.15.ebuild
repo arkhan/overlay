@@ -8,11 +8,12 @@ LICENSE="MIT"
 
 SLOT="0"
 
-SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+		 venv? ( https://github.com/${PN}/${PN}-virtualenv/archive/v1.1.5.tar.gz -> ${PN}-virtualenv.tar.gz )"
 RESTRICT="mirror"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="+bash-completion"
+IUSE="+bash-completion +venv"
 
 RDEPEND="
 	app-shells/bash
@@ -21,6 +22,21 @@ RDEPEND="
 		)
 "
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	use venv && unpack ${PN}-virtualenv.tar.gz
+}
+
+src_prepare() {
+	if use venv; then
+		cd ${WORKDIR}/${PN}-virtualenv-1.1.5
+		eapply "${FILESDIR}/fix-symlink-308.patch"
+		eapply_user
+		cd ${WORKDIR}
+		mv ${PN}-virtualenv-1.1.5 ${P}/plugins/venv
+	fi
+}
 
 src_configure() { :; }
 
@@ -38,7 +54,13 @@ src_install() {
 		fperms 775 "$bin"
 		dosym "$bin" /usr/bin/$(basename -- "$bin")
 	done
-	if use bash-completion; then
-		newbashcomp completions/pyenv.bash ${PN}
+
+	use bash-completion && newbashcomp completions/pyenv.bash ${PN}
+
+	if use venv; then
+		for vbin in $(ls /usr/share/pyenv/plugins/venv/bin/*) ; do
+			fperms 775 "$vbin"
+			dosym "$vbin" /usr/bin/$(basename -- "$vbin")
+		done
 	fi
 }
